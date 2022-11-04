@@ -1,0 +1,25 @@
+{
+    "name": "theodorejb/dev-thoughts",
+    "description": "Feature poignant quotes and funny sayings related to programming",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Theodore Brown",
+            "email": "theodorejb@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "theodorejb\\DevThoughts\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "ext-json": "*",
+        "theodorejb/peachy-sql": "^6.2"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.29"
+    }
+}

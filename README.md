@@ -66,8 +66,7 @@ if ($featured->author) {
 The `DevThoughts` constructor takes an optional second parameter for the table name.
 This allows you to name the table something other than `dev_thoughts` in your database if needed.
 
-The `insertDefaultThoughts()` method should only be called once after creating the database table,
-to avoid inserting duplicates.
+The `insertDefaultThoughts()` method should only be called once after installing or updating the library.
 
 The `getFeaturedThought()` method takes an optional integer parameter to choose how long a thought
 is featured (in seconds). It defaults to `86400` (24 hours).

@@ -69,10 +69,23 @@ class DevThoughts
      */
     public function insertDefaultThoughts(): void
     {
+        $sql = "SELECT thought FROM {$this->table}";
+        /** @var list<array{thought: string}> $existing */
+        $existing = $this->db->query($sql)->getAll();
+        $map = [];
+
+        foreach ($existing as $row) {
+            $map[$row['thought']] = true;
+        }
+
         $utc = new DateTimeZone('UTC');
         $rows = [];
 
         foreach (self::getDefaultThoughts() as $thought) {
+            if (isset($map[$thought->text])) {
+                continue; // thought is already in the database
+            }
+
             // insert with random last featured time so that featured thoughts will be shuffled
             $randomTimestamp = random_int(0, 86400); // random time on 1970-01-01
             $randomDatetime = new DateTimeImmutable("@{$randomTimestamp}", $utc);

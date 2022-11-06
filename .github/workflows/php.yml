@@ -38,6 +38,9 @@ jobs:
       - run: psalm --output-format=github
         if: ${{ matrix.php == '8.1' }}
 
+      - name: Wait for MySQL
+        run: sleep 3
+
       - run: vendor/bin/phpunit
         env:
           DB_PORT: ${{ job.services.mysql.ports[3306] }}

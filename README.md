@@ -7,33 +7,14 @@ which can be easily inserted and featured from a database.
 
 `composer require theodorejb/dev-thoughts`
 
-Then add a table to your database to contain the dev thoughts:
+## Usage without database
 
-**Mysql:**
+Call `DevThoughts::getDefaultThoughts()`.
+This returns a list of `Thought` objects for of all the quotes in the default JSON file, to be used however you want.
 
-```sql
-CREATE TABLE dev_thoughts (
-    thought_id int unsigned primary key auto_increment,
-    thought varchar(500) not null unique,
-    author varchar(50) not null,
-    reference varchar(100) not null,
-    last_featured datetime
-);
-```
+Or you can simply copy the JSON file into your project and use it with the language of your choice.
 
-**SQL Server:**
-
-```sql
-CREATE TABLE dev_thoughts (
-    thought_id int primary key identity,
-    thought varchar(500) not null unique,
-    author varchar(50) not null,
-    reference varchar(100) not null,
-    last_featured datetime2(0)
-);
-```
-
-## Usage
+## Usage with database
 
 Create a `DevThoughts` instance, passing it a [PeachySQL](https://github.com/theodorejb/peachy-sql/)
 object for your database:
@@ -43,33 +24,35 @@ use theodorejb\DevThoughts\DevThoughts;
 
 $db = new PeachySQL\Mysql($mysqlConn);
 $devThoughts = new DevThoughts($db);
-
-// if you haven't yet populated the table, call this method to do so:
-$devThoughts->insertDefaultThoughts();
-
-$featured = $devThoughts->getFeaturedThought();
-
-echo $featured->text . "\n";
-
-if ($featured->author) {
-    echo " - {$featured->author}";
-    
-    if ($featured->reference) {
-        echo ", {$featured->reference}";
-    }
-    
-    echo "\n";
-}
 ```
 
-### Notes
 The `DevThoughts` constructor takes an optional second parameter for the table name.
 This allows you to name the table something other than `dev_thoughts` in your database if needed.
 
-The `insertDefaultThoughts()` method should only be called once after installing or updating the library.
+Instance methods:
 
-The `getFeaturedThought()` method takes an optional integer parameter to choose how long a thought
-is featured (in seconds). It defaults to `86400` (24 hours).
+### `insertDefaultThoughts()`
+
+Call this method once after installing or updating the library to create the `dev_thoughts`
+table if it doesn't exist and insert any missing default thoughts.
+
+### `getFeaturedThought()`
+
+Returns a `Thought` object for the current featured thought.
+
+An optional integer parameter can be passed to choose how long a thought is featured (in seconds).
+It defaults to `86400` (24 hours).
+
+The `Thought` object has the following public properties:
+
+| Type                 | Property       |
+|----------------------|----------------|
+| `int`                | `id`           |
+| `string`             | `text`         |
+| `string`             | `author`       |
+| `string`             | `reference`    |
+| `?DateTimeImmutable` | `lastFeatured` |
+
 
 ## Author
 

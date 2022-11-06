@@ -7,6 +7,7 @@ namespace theodorejb\DevThoughts;
 use DateTimeImmutable;
 use DateTimeZone;
 use PeachySQL\PeachySql;
+use PeachySQL\SqlServer;
 
 /**
  * @psalm-type ThoughtRow = array{
@@ -65,13 +66,39 @@ class DevThoughts
     }
 
     /**
-     * This function should only be run once, to avoid inserting duplicates.
+     * This function should only be run once after installing/updating the library.
      */
     public function insertDefaultThoughts(): void
     {
-        $sql = "SELECT thought FROM {$this->table}";
+        if ($this->db instanceof SqlServer) {
+            $sql = "IF OBJECT_ID(N'dbo.{$this->table}', N'U') IS NULL BEGIN
+                CREATE TABLE {$this->table} (
+                    thought_id int primary key identity,
+                    thought nvarchar(500) not null,
+                    author nvarchar(50) not null,
+                    reference nvarchar(100) not null,
+                    last_featured datetime2(0),
+                    CONSTRAINT uq_thought UNIQUE (thought),
+                    INDEX ix_last_featured (last_featured)
+                );
+                END";
+        } else {
+            // MySQL
+            $sql = "CREATE TABLE IF NOT EXISTS {$this->table} (
+                    thought_id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                    thought varchar(500) not null,
+                    author varchar(50) not null,
+                    reference varchar(100) not null,
+                    last_featured datetime,
+                    CONSTRAINT uq_thought UNIQUE (thought),
+                    INDEX ix_last_featured (last_featured)
+                );";
+        }
+
+        $this->db->query($sql);
+
         /** @var list<array{thought: string}> $existing */
-        $existing = $this->db->query($sql)->getAll();
+        $existing = $this->db->query("SELECT thought FROM {$this->table}")->getAll();
         $map = [];
 
         foreach ($existing as $row) {

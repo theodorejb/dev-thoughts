@@ -69,13 +69,19 @@ class DevThoughts
      */
     public function insertDefaultThoughts(): void
     {
+        $utc = new DateTimeZone('UTC');
         $rows = [];
 
         foreach (self::getDefaultThoughts() as $thought) {
+            // insert with random last featured time so that featured thoughts will be shuffled
+            $randomTimestamp = random_int(0, 86400); // random time on 1970-01-01
+            $randomDatetime = new DateTimeImmutable("@{$randomTimestamp}", $utc);
+
             $rows[] = [
                 'thought' => $thought->text,
                 'author' => $thought->author,
                 'reference' => $thought->reference,
+                'last_featured' => $randomDatetime->format(self::DB_DATE),
             ];
         }
 

@@ -22,15 +22,133 @@
       "t": "The generation of random numbers is too important to be left to chance.",
       "a": "Robert R. Coveyou"
     },
-    {"t": "I � Unicode."},
-    {"t": "If you put a million monkeys at a million keyboards, one of them will eventually write a Java program. The rest of them will write Perl programs."},
+    {
+      "t": "I � Unicode."
+    },
+    {
+      "t": "If you put a million monkeys at a million keyboards, one of them will eventually write a Java program. The rest of them will write Perl programs."
+    },
+    {
+      "t": "You never finish a program, you just stop working on it."
+    },
+    {
+      "t": "Should array indices start at 0 or 1? My compromise of 0.5 was rejected without, I thought, proper consideration.",
+      "a": "Stan Kelly-Bootle"
+    },
+    {
+      "t": "First, solve the problem. Then, write the code.",
+      "a": "John Johnson"
+    },
+    {
+      "t": "I apologize for writing a complicated program. I didn't have time to write a simple one.",
+      "a": "Tim Sweeney"
+    },
+    {
+      "t": "Debugging is like being the detective in a crime movie where you are also the murderer.",
+      "a": "Filipe Fortes"
+    },
+    {
+      "t": "The value of a prototype is in the education it gives you, not in the code itself.",
+      "a": "Alan Cooper"
+    },
+    {
+      "t": "There is surely nothing quite so useless as doing with great efficiency what should not be done at all.",
+      "a": "Peter F. Drucker"
+    },
+    {
+      "t": "Programming is not about typing, it's about thinking.",
+      "a": "Rich Hickey"
+    },
+    {
+      "t": "Code never lies, comments sometimes do.",
+      "a": "Ron Jeffries"
+    },
+    {
+      "t": "Learning to program has no more to do with designing interactive software than learning to touch type has to do with writing poetry.",
+      "a": "Ted Nelson"
+    },
+    {
+      "t": "All sorts of things can happen when you're open to new ideas and playing around with things.",
+      "a": "Stephanie Kwolek"
+    },
+    {
+      "t": "It would be a mistake to think that solving problems is a purely intellectual affair; determination and emotions play an important role.",
+      "a": "George Pólya"
+    },
+    {
+      "t": "In 1974, computers were oppressive devices in far-off air conditioned places. Now you can be oppressed by computers in your own living room.",
+      "a": "Ted Nelson"
+    },
+    {
+      "t": "Beware of bugs in the above code; I have only proved it correct, not tried it.",
+      "a": "Donald Knuth"
+    },
+    {
+      "t": "If you're not failing 90% of the time, then you're probably not working on sufficiently challenging problems.",
+      "a": "Alan Kay"
+    },
+    {
+      "t": "I have reaffirmed a long-standing and strongly held view: Language comparisons are rarely meaningful and even less often fair.",
+      "a": "Bjarne Stroustrup"
+    },
+    {
+      "t": "Don't even start considering solutions until you understand the problem. Your goal should be to \"solve\" the problem mostly within the problem domain, not the solution domain.",
+      "a": "Oz Nova"
+    },
+    {
+      "t": "The secret to optimization is changing the problem to make it easier to optimize.",
+      "a": "John Carmack"
+    },
+    {
+      "t": "They say if you hold a UNIX shell up to your ear, you can hear the C."
+    },
+    {
+      "t": "Any problem in computer science can be solved with another layer of indirection, except of course for the problem of too many indirections.",
+      "a": "David J. Wheeler"
+    },
+    {
+      "t": "The most important single aspect of software development is to be clear about what you are trying to build.",
+      "a": "Bjarne Stroustrup"
+    },
+    {
+      "t": "Someone who claims to have a perfect programming language is either a salesman or a fool, or both.",
+      "a": "Bjarne Stroustrup"
+    },
+    {
+      "t": "Cut until there is nothing left to cut and all there is left is principled and fundamental.",
+      "a": "Bjarne Stroustrup"
+    },
+    {
+      "t": "Inside every large program, there is a small program trying to get out.",
+      "a": "C. A. R. Hoare"
+    },
+    {
+      "t": "Good programmers don't just write programs. They build a working vocabulary.",
+      "a": "Guy Steele"
+    },
+    {
+      "t": "Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.",
+      "a": "Alan Eagleson"
+    },
+    {
+      "t": "Code is like humor. When you have to explain it, it's bad.",
+      "a": "Cory House"
+    },
+    {
+      "t": "Fix the cause, not the symptom.",
+      "a": "Steve Maguire"
+    },
+    {
+      "t": "If builders built buildings the way programmers wrote programs, then the first woodpecker that came along would destroy civilization.",
+      "a": "Gerald Weinberg"
+    },
     {
       "t": "If \"quick and easy\" fixes are prioritized over clean, well-architected code, eventually there will be no quick and easy fixes.",
       "a": "Theodore J. Brown"
     },
     {
-      "t": "Java is to JavaScript as ham is to hamster.",
-      "a": "Jeremy Keith"
+      "t": "Java is to JavaScript what Car is to Carpet.",
+      "a": "Chris Heilmann"
     },
     {
       "t": "Rarely is anyone thanked for the work they did to prevent the disaster that didn't happen.",
@@ -53,7 +171,7 @@
       "a": "Chris Sacca"
     },
     {
-      "t": "UNIX is simple. It just takes a genius to understand its simplicity.",
+      "t": "UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity.",
       "a": "Dennis M. Ritchie"
     },
     {
@@ -76,7 +194,9 @@
       "t": "Always bet on JavaScript.",
       "a": "Brendan Eich"
     },
-    {"t": "No code is faster than no code."},
+    {
+      "t": "No code is faster than no code."
+    },
     {
       "t": "The most secure code in the world is code which is never written.",
       "a": "Colin Percival"
@@ -129,7 +249,6 @@
       "t": "The cleaner and nicer the program, the faster it's going to run. And if it doesn't, it'll be easy to make it fast.",
       "a": "Joshua Bloch"
     },
-    {"t": "It's not a bug -- it's an undocumented feature."},
     {
       "t": "It's better to wait for a productive programmer to become available than it is to wait for the first available programmer to become productive.",
       "a": "Steve McConnell"
@@ -144,7 +263,7 @@
     },
     {
       "t": "Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code.",
-      "a": "Christopher Thompson"
+      "a": "Dan Salomon"
     },
     {
       "t": "There is not now, nor has there ever been, nor will there ever be, any programming language in which it is the least bit difficult to write bad code.",
@@ -175,7 +294,7 @@
       "a": "Tom Cargill"
     },
     {
-      "t": "There's an old story about the person who wished his computer were as easy to use as his telephone. That wish has come true, since I no longer know how to use my telephone.",
+      "t": "I have always wished for my computer to be as easy to use as my telephone. My wish has come true because I can no longer figure out how to use my telephone.",
       "a": "Bjarne Stroustrup"
     },
     {
@@ -348,10 +467,6 @@
     },
     {
       "t": "Code is read more than it is written.",
-      "a": "Daniel Roy Greenfeld, Audrey Roy Greenfeld"
-    },
-    {
-      "t": "An individual block of code takes moments to write, minutes or hours to debug, and can last forever without being touched again. It's when you or someone else visits code written yesterday or ten years ago that having code written in a clear, consistent style becomes extremely useful. Understandable code frees mental bandwidth from having to puzzle out inconsistencies, making it easier to maintain and enhance projects of all sizes.",
       "a": "Daniel Roy Greenfeld, Audrey Roy Greenfeld"
     },
     {

@@ -228,8 +228,57 @@
       "a": "Flon's Law"
     },
     {
+      "t": "A little retrospection shows that although many fine, useful software systems have been designed by committees and built as part of multipart projects, those software systems that have excited passionate fans are those that are the products of one or a few designing minds, great designers.",
+      "a": "Frederick P. Brooks",
+      "r": "No Silver Bullet"
+    },
+    {
+      "t": "Adding manpower to a late software project makes it later.",
+      "a": "Frederick P. Brooks",
+      "r": "The Mythical Man-Month"
+    },
+    {
+      "t": "Einstein argued that there must be simplified explanations of nature, because God is not capricious or arbitrary. No such faith comforts the software engineer. Much of the complexity that he must master is arbitrary complexity, forced without rhyme or reason by the many human institutions and systems to which his interfaces must conform.",
+      "a": "Frederick P. Brooks",
+      "r": "No Silver Bullet"
+    },
+    {
+      "t": "Great designs come from great designers.",
+      "a": "Frederick P. Brooks",
+      "r": "No Silver Bullet"
+    },
+    {
+      "t": "I will contend that conceptual integrity is the most important consideration in system design. It is better to have a system omit certain anomalous features and improvements, but to reflect one set of design ideas, than to have one that contains many good but independent and uncoordinated ideas.",
+      "a": "Frederick P. Brooks",
+      "r": "The Mythical Man-Month"
+    },
+    {
+      "t": "Plan to throw one away. You will do that, anyway. Your only choice is whether to try to sell the throwaway to customers.",
+      "a": "Frederick P. Brooks"
+    },
+    {
+      "t": "The differences are not minor – they are rather like the differences between Salieri and Mozart. Study after study shows that the very best designers produce structures that are faster, smaller, simpler, clearer, and produced with less effort.",
+      "a": "Frederick P. Brooks",
+      "r": "No Silver Bullet"
+    },
+    {
+      "t": "The hardest part of the software task is arriving at a complete and consistent specification, and much of the essence of building a program is in fact the debugging of the specification.",
+      "a": "Frederick P. Brooks",
+      "r": "No Silver Bullet"
+    },
+    {
+      "t": "The hardest single part of building a software system is deciding precisely what to build.",
+      "a": "Frederick P. Brooks",
+      "r": "The Mythical Man-Month"
+    },
+    {
       "t": "What one programmer can do in one month, two programmers can do in two months.",
-      "a": "Fred Brooks"
+      "a": "Frederick P. Brooks"
+    },
+    {
+      "t": "When a task cannot be partitioned because of sequential constraints, the application of more effort has no effect on the schedule. The bearing of a child takes nine months, no matter how many women are assigned. Many software tasks have this characteristic because of the sequential nature of debugging.",
+      "a": "Frederick P. Brooks",
+      "r": "The Mythical Man-Month"
     },
     {
       "t": "It would be a mistake to think that solving problems is a purely intellectual affair; determination and emotions play an important role.",

@@ -14,6 +14,8 @@ This returns a list of `Thought` objects for of all the quotes in the default JS
 
 Or you can simply copy the JSON file into your project and use it with the language of your choice.
 
+Note: thoughts may contain `<em>` tags indicating italicized words.
+
 ## Usage with database
 
 Create a `DevThoughts` instance, passing it a [PeachySQL](https://github.com/theodorejb/peachy-sql/)

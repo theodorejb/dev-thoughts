@@ -98,6 +98,10 @@
       "a": "C.A.R. Hoare"
     },
     {
+      "t": "It is perfectly okay to write garbage – as long as you edit brilliantly.",
+      "a": "C. J. Cherryh"
+    },
+    {
       "t": "On two occasions, I have been asked [by members of Parliament], \"Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?\" I am not able to rightly apprehend the kind of confusion of ideas that could provoke such a question.",
       "a": "Charles Babbage"
     },
@@ -452,6 +456,10 @@
       "a": "Ralph Johnson"
     },
     {
+      "t": "The difference between good and bad programmers isn't the ability to write code. It's the judgment to know what code should be written.",
+      "a": "Rich Harris"
+    },
+    {
       "t": "Programming is not about typing, it's about thinking.",
       "a": "Rich Hickey"
     },
@@ -549,6 +557,10 @@
     {
       "t": "You know you are working on clean code when each routine you read turns out to be pretty much what you expected. You can call it beautiful code when the code also makes it look like the language was made for the problem.",
       "a": "Ward Cunningham"
+    },
+    {
+      "t": "One test result is worth one thousand expert opinions.",
+      "a": "Wernher von Braun"
     },
     {
       "t": "A programmer puts two glasses on his bedside table before going to sleep. A full one, in case he gets thirsty, and an empty one, in case he doesn't.",

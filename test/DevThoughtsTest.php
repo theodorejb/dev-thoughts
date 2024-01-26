@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-namespace theodorejb\DevThoughts;
+namespace theodorejb\DevThoughts\Test;
 
 use PeachySQL\{Mysql, PeachySql, SqlServer};
 use PHPUnit\Framework\TestCase;
-use theodorejb\DevThoughts\Test\DbConnector;
+use theodorejb\DevThoughts\DevThoughts;
+use theodorejb\DevThoughts\Test\src\DbConnector;
 
 class DevThoughtsTest extends TestCase
 {
@@ -18,7 +19,7 @@ class DevThoughtsTest extends TestCase
     /**
      * @return list<array{0: PeachySql}>
      */
-    public function dbProvider(): array
+    public static function dbProvider(): array
     {
         $config = DbConnector::getConfig();
         $databases = [];

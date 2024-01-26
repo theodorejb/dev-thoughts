@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2024-01-25
+### Added
+- 15 new dev thoughts.
+
+### Changed
+- PHP 8.1+ is now required.
+
 ## [1.1.0] - 2022-11-06
 ### Added
 - 29 new dev thoughts.
@@ -24,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Initial stable release
 
-[Unreleased]: https://github.com/theodorejb/dev-thoughts/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/theodorejb/dev-thoughts/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/theodorejb/dev-thoughts/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/theodorejb/dev-thoughts/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/theodorejb/dev-thoughts/tree/v1.0.0

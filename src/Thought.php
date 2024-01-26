@@ -8,6 +8,7 @@ use DateTimeImmutable;
 
 /**
  * @psalm-import-type ThoughtRow from DevThoughts
+ * @api
  */
 class Thought
 {
@@ -25,7 +26,7 @@ class Thought
      */
     public static function fromDbRow(array $row): self
     {
-        $lastFeatured = $row['last_featured'] ? new DateTimeImmutable($row['last_featured']) : null;
+        $lastFeatured = $row['last_featured'] !== null ? new DateTimeImmutable($row['last_featured']) : null;
         return new self($row['thought_id'], $row['thought'], $row['author'], $row['reference'], $lastFeatured);
     }
 

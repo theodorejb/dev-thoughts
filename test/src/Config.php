@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace theodorejb\DevThoughts\Test;
+namespace theodorejb\DevThoughts\Test\src;
 
 /**
  * Default test config. Values can be overridden with a LocalConfig child class.

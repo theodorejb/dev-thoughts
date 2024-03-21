@@ -114,7 +114,7 @@ class DevThoughts
             }
 
             // insert with random last featured time so that featured thoughts will be shuffled
-            $randomTimestamp = random_int(0, 86400); // random time on 1970-01-01
+            $randomTimestamp = random_int(0, 86_399); // random time on 1970-01-01
             $randomDatetime = new DateTimeImmutable("@{$randomTimestamp}", $utc);
 
             $rows[] = [

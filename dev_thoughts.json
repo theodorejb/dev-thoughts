@@ -86,18 +86,6 @@
       "a": "Brian W. Kernighan"
     },
     {
-      "t": "Inside every large program, there is a small program trying to get out.",
-      "a": "C.A.R. Hoare"
-    },
-    {
-      "t": "The most important property of a program is whether it accomplishes the intention of its user.",
-      "a": "C.A.R. Hoare"
-    },
-    {
-      "t": "There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies. And the other way is to make it so complicated that there are no obvious deficiencies.",
-      "a": "C.A.R. Hoare"
-    },
-    {
       "t": "It is perfectly okay to write garbage – as long as you edit brilliantly.",
       "a": "C. J. Cherryh"
     },
@@ -157,10 +145,6 @@
     },
     {
       "t": "Beware of bugs in the above code; I have only proved it correct, not tried it.",
-      "a": "Donald Knuth"
-    },
-    {
-      "t": "Premature optimization is the root of all evil.",
       "a": "Donald Knuth"
     },
     {
@@ -553,6 +537,26 @@
     {
       "t": "Some programmers, when confronted with a problem, think \"I know, I'll use floating point arithmetic.\" Now they have 1.999999999997 problems.",
       "a": "Tom Scott"
+    },
+    {
+      "t": "Inside every well-written large program is a well-written small program.",
+      "a": "Tony Hoare"
+    },
+    {
+      "t": "Premature optimization is the root of all evil.",
+      "a": "Tony Hoare"
+    },
+    {
+      "t": "The most important property of a program is whether it accomplishes the intention of its user.",
+      "a": "Tony Hoare"
+    },
+    {
+      "t": "The unavoidable price of reliability is simplicity.",
+      "a": "Tony Hoare"
+    },
+    {
+      "t": "There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult.",
+      "a": "Tony Hoare"
     },
     {
       "t": "A program is portable to the extent that it can be easily moved to a new computing environment with much less effort than would be required to write it afresh.",

@@ -1,48 +1,24 @@
 <?php
 
-declare(strict_types=1);
-
 namespace theodorejb\DevThoughts\Test;
 
-use PeachySQL\{Mysql, PeachySql, SqlServer};
 use PHPUnit\Framework\TestCase;
 use theodorejb\DevThoughts\DevThoughts;
-use theodorejb\DevThoughts\Test\src\DbConnector;
 
-class DevThoughtsTest extends TestCase
+final class DevThoughtsTest extends TestCase
 {
-    public static function tearDownAfterClass(): void
+    public function testGetDailyThought(): void
     {
-        DbConnector::deleteTestTable();
+        $thought = (new DevThoughts())->getDailyThought();
+        $this->assertNotSame('', $thought->text);
     }
 
-    /**
-     * @return list<array{0: PeachySql}>
-     */
-    public static function dbProvider(): array
+    public function testGetThought(): void
     {
-        $config = DbConnector::getConfig();
-        $databases = [];
+        $thought = (new DevThoughts())->getThought(25);
 
-        if ($config->testMysql()) {
-            $databases[] = [new Mysql(DbConnector::getMysqlConn())];
-        }
-
-        if ($config->testSqlsrv()) {
-            $databases[] = [new SqlServer(DbConnector::getSqlsrvConn())];
-        }
-
-        return $databases;
-    }
-
-    /**
-     * @dataProvider dbProvider
-     */
-    public function testGetFeaturedThought(PeachySql $db): void
-    {
-        $devThoughts = new DevThoughts($db);
-        $devThoughts->insertDefaultThoughts();
-        $featured = $devThoughts->getFeaturedThought();
-        $this->assertNotSame('', $featured->text);
+        $this->assertEquals("Programming isn't about what you know; it's about what you can figure out.", $thought->text);
+        $this->assertEquals('Chris Pine', $thought->author);
+        $this->assertEquals('Learn to Program', $thought->reference);
     }
 }

@@ -1,58 +1,38 @@
 <?php
 
-declare(strict_types=1);
-
 namespace theodorejb\DevThoughts;
 
-use DateTimeImmutable;
-
-/**
- * @psalm-import-type ThoughtRow from DevThoughts
- * @api
- */
-class Thought
+final class Thought
 {
     public function __construct(
-        public int $id,
         public string $text,
         public string $author,
         public string $reference,
-        public DateTimeImmutable|null $lastFeatured,
-    ) {
-    }
-
-    /**
-     * @param ThoughtRow $row
-     */
-    public static function fromDbRow(array $row): self
-    {
-        $lastFeatured = $row['last_featured'] !== null ? new DateTimeImmutable($row['last_featured']) : null;
-        return new self($row['thought_id'], $row['thought'], $row['author'], $row['reference'], $lastFeatured);
-    }
+    ) {}
 
     /**
      * Return a single Thought from an array with the structure used in dev_thoughts.json
      */
     public static function fromJsonArray(array $data): self
     {
-        $t = $data['t'] ?? null; // thought text
+        $text = $data['t'] ?? null;
 
-        if (!is_string($t) || $t === '') {
+        if (!is_string($text) || $text === '') {
             throw new \Exception("'t' property must be a non-empty string");
         }
 
-        $a = $data['a'] ?? ''; // author (optional)
+        $author = $data['a'] ?? ''; // author is optional
 
-        if (!is_string($a)) {
+        if (!is_string($author)) {
             throw new \Exception("'a' property must be a string");
         }
 
-        $r = $data['r'] ?? ''; // reference (optional)
+        $reference = $data['r'] ?? ''; // reference is optional
 
-        if (!is_string($r)) {
+        if (!is_string($reference)) {
             throw new \Exception("'r' property must be a string");
         }
 
-        return new self(0, $t, $a, $r, null);
+        return new self($text, $author, $reference);
     }
 }

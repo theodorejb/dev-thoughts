@@ -1,10 +1,21 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [2.0.0] - 2025-05-19
+### Added
+- New quotes from Edsger Dijkstra and Michael Feathers.
+- `getDailyThought()` method.
+- `getThought(int $index)` method.
+
+### Changed
+- Renamed `getDefaultThoughts()` to `getAllThoughts()`, and made it an instance method rather than static.
+
+### Removed
+- All database dependencies.
+- `getFeaturedThought()` and `insertDefaultThoughts()` methods.
 
 ## [1.2.0] - 2024-01-25
 ### Added
@@ -31,7 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Initial stable release
 
-[Unreleased]: https://github.com/theodorejb/dev-thoughts/compare/v1.2.0...HEAD
+[2.0.0]: https://github.com/theodorejb/dev-thoughts/compare/v1.2.0...v2.0.0
 [1.2.0]: https://github.com/theodorejb/dev-thoughts/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/theodorejb/dev-thoughts/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/theodorejb/dev-thoughts/tree/v1.0.0

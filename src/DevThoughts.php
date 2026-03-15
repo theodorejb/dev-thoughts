@@ -1,7 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace theodorejb\DevThoughts;
 
+/**
+ * @phpstan-import-type ThoughtArr from Thought
+ */
 final class DevThoughts
 {
     public function getDailyThought(): Thought
@@ -29,19 +34,11 @@ final class DevThoughts
             throw new \Exception('Failed to load dev_thoughts.json');
         }
 
+        /** @var array{thoughts: ThoughtArr[]} $jsonArray */
         $jsonArray = json_decode($json, true, flags: JSON_THROW_ON_ERROR);
-
-        if (!isset($jsonArray['thoughts']) || !is_array($jsonArray['thoughts'])) {
-            throw new \Exception("Unexpected JSON structure");
-        }
-
         $thoughts = [];
 
-        foreach ($jsonArray['thoughts'] as $key => $val) {
-            if (!is_int($key) || !is_array($val)) {
-                throw new \Exception("Unexpected structure for thought {$key}");
-            }
-
+        foreach ($jsonArray['thoughts'] as $val) {
             $thoughts[] = Thought::fromJsonArray($val);
         }
 

@@ -15,7 +15,7 @@ final class DevThoughtsTest extends TestCase
 
     public function testGetThought(): void
     {
-        $thought = (new DevThoughts())->getThought(25);
+        $thought = (new DevThoughts())->getThought(24);
 
         $this->assertEquals("Programming isn't about what you know; it's about what you can figure out.", $thought->text);
         $this->assertEquals('Chris Pine', $thought->author);
